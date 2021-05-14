@@ -1,0 +1,31 @@
+﻿<Page x:Class="PROG7311_ABC_Spares.SellPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PROG7311_ABC_Spares"
+      mc:Ignorable="d" 
+      d:DesignHeight="250" d:DesignWidth="400"    
+      Title="SellPage"
+      Background="Gray"
+      FontSize="14"
+      ShowsNavigationUI="False">
+    <Grid>
+        <ListView x:Name="lvParts" HorizontalAlignment="Left" Height="197" Margin="10,10,0,0" VerticalAlignment="Top" Width="380" FontSize="12">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Part ID" 
+                                        DisplayMemberBinding="{Binding PartName}"
+                                        Width="75"/>
+                    <GridViewColumn Header="Part" 
+                                        DisplayMemberBinding="{Binding PartName}"
+                                        Width="200"/>
+                    <GridViewColumn Header="Price" 
+                                        DisplayMemberBinding="{Binding PartPrice}"
+                                        Width="100"/>                
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnSell" Content="Sell" HorizontalAlignment="Left" Margin="315,217,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+    </Grid>
+</Page>
